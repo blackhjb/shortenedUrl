@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+<div align="center">
+    <h2>URL 줄이기</h2>
+    <hr>
+    <form method="POST" action="/shortening/url" >
+        <table border="1" height="100">
+            <tr height="60">
+                <td><input type="text" name="targetUrl" size="80" style="height: 100%; font-size: large;" placeholder="원본 URL 입력"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="SHORTEN" />
+                    <input type="reset" value="CLEAR" />
+                </td>
+            </tr>
+        </table>
+
+        <h1>결과 화면</h1>
+<!--        <p th:if="${isValidUrl == null}" th:text="${isValidUrl}"></p>-->
+        <p th:if="${shortenedUrl == null}" th:text="${shortenedUrl}"></p>
+        <a th:href="${originalUrl}+${shortenedUrl}"><span th:text="${shortenedUrl}"></span></a>
+
+    </form>
+    <hr>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+FAIL_ON_EMPTY_BEANS: false
+active: dev
+enabled: true
+file-size-threshold: 1MB
+jackson: ''
+jwt:
+    secret: godaejwt
+location: ${user.home}/${service.name}/tmpfiles
+logging:
+    level:
+        org:
+            hibernate:
+                type:
+                    descriptor:
+                        sql: trace
+server:
+    port: 8080
+service:
+    name: shorteningurl
+    version: V0.0.1
+spring:
+    datasource:
+        driverClassName: org.h2.Driver
+        password: ''
+        url: jdbc:h2:mem:testdb
+        username: sa
+    h2:
+        console:
+            enabled: true
+            path: /h2-console
+    jpa:
+        properties:
+            hibernate:
+                show_sql: true
+                use_sql_comments: true
+    profiles:
+        active: dev
+    servlet:
+        multipart:
+            enabled: true

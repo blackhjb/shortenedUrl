@@ -20,7 +20,8 @@ URL 줄이기
 $ curl -s "https://get.sdkman.io" | bash
 $ source "$HOME/.sdkman/bin/sdkman-init.sh"
 2. sdk install maven
-3. java -jar *.jar
+3. (mvn clean)=>mvn package
+4. java -jar *.jar
 
 # DB
 http://localhost:8080/h2-console

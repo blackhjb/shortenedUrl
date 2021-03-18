@@ -2,7 +2,7 @@
 URL 줄이기
 
 ## Spec
-- **언어 : JAVA (JDK 13)/thymeleaf **
+- **언어 : JAVA (JDK 13)/thymeleaf**
 - **프레임워크 : SpringBoot 2.4.3.RELEASE, JPA & Hibernate)**
 - **저장소 : H2(in-memory db)**
 - **의존관리 : Maven**
